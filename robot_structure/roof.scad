@@ -54,6 +54,7 @@ difference() {
     translate([105, -105, -2]) linear_extrude(8, true) circle(d=5, true);
     translate([-105, -105, -2]) linear_extrude(8, true) circle(d=5, true);
 
+//TODO: scratch + trous lidar
 }
 
 translate([0, 0, 70]) rotate(-90)
