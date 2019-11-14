@@ -19,25 +19,34 @@ difference() {
     translate([79, 50, -2]) linear_extrude(8, true) square([32, 70], true);
         
 //Bouton d'arret d'urgence
-    translate([-90, -60, -2]) linear_extrude(8, true) circle(d=15, true);
+    translate([-90, -65, -2]) linear_extrude(8, true) circle(d=15, true);
         
-//Bouton toggle
+//Bouton toggle team
+    translate([-95, 80, 3]) linear_extrude(5,true) rotate(90) text("Yellow", $fn=200, size=5, halign="center");
     translate([-80, 80, -2]) linear_extrude(8, true) square([21, 12], true);
+    translate([-60, 80, 3]) linear_extrude(5,true) rotate(90) text("Blue", $fn=200, size=5, halign="center");
         
 //Bouton reset stm32
+    translate([-90, 40, 3]) linear_extrude(5,true) rotate(90) text("Reset", $fn=200, size=5, halign="center");
     translate([-80, 40, -2]) linear_extrude(8, true) circle(d=8, true); 
         
 //Leds
-    translate([55, 50, 3]) linear_extrude(5,true) rotate(90) text("Power", $fn=200, size=5, halign="center");
+    translate([0, 60, 3]) linear_extrude(5,true) rotate(90) text("Run", $fn=200, size=5, halign="center");
     translate([0, 80, -2]) linear_extrude(8, true) circle(d=3, true);
     
-    translate([55, 50, 3]) linear_extrude(5,true) rotate(90) text("Power", $fn=200, size=5, halign="center");
+    translate([30, 60, 3]) linear_extrude(5,true) rotate(90) text("Error", $fn=200, size=5, halign="center");
     translate([30, 80, -2]) linear_extrude(8, true) circle(d=3, true);
     
-    translate([55, 50, 3]) linear_extrude(5,true) rotate(90) text("Power", $fn=200, size=5, halign="center");
+    translate([-30, 60, 3]) linear_extrude(5,true) rotate(90) text("Ready", $fn=200, size=5, halign="center");
     translate([-30, 80, -2]) linear_extrude(8, true) circle(d=3, true);
         
-        
+//Clé
+    translate([30, -95, -2]) linear_extrude(8, true) circle(d = 20, $fn=6);
+
+//Score 
+    //TODO: à modifier
+    translate([-70, -10, 3]) linear_extrude(5,true) rotate(90) text("Score", $fn=200, size=5, halign="center");
+    translate([-90, -10, -2]) linear_extrude(8, true) square([19, 50], true);
 }
 
 translate([0, 0, 70]) rotate(-90)
