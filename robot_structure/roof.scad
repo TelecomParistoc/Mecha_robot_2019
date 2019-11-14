@@ -47,9 +47,16 @@ difference() {
     //TODO: à modifier
     translate([-70, -10, 3]) linear_extrude(5,true) rotate(90) text("Score", $fn=200, size=5, halign="center");
     translate([-90, -10, -2]) linear_extrude(8, true) square([19, 50], true);
+    
+//Trous
+    translate([105, 105, -2]) linear_extrude(8, true) circle(d=5, true);
+    translate([-105, 105, -2]) linear_extrude(8, true) circle(d=5, true);
+    translate([105, -105, -2]) linear_extrude(8, true) circle(d=5, true);
+    translate([-105, -105, -2]) linear_extrude(8, true) circle(d=5, true);
+
 }
 
 translate([0, 0, 70]) rotate(-90)
-import("/Users/nima/Downloads/abc/X4.stl", convexity=3);
+import("./X4.stl", convexity=3);
 
 
