@@ -13,7 +13,7 @@ union() {
                     translate ([0 ,0, 3]) linear_extrude(10,true) circle(d=13,$fn=90);
                 }
                 //Diametre ecrou : 9mm
-                translate ([0 ,0, -4]) linear_extrude(20,true) circle(d=11,$fn=6);
+                translate ([0 ,0, -4]) linear_extrude(20,true) circle(d=10.3,$fn=6);
             }
             difference(){
                 translate ([0 ,0, 9]) linear_extrude(4,true) circle(d=11,$fn=90);
