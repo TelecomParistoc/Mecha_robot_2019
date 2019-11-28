@@ -1,5 +1,3 @@
-font="Roboto Mono";
-
 difference() {
     color("white") linear_extrude(5,true)
         minkowski() {
@@ -57,7 +55,5 @@ difference() {
 //TODO: scratch + trous lidar
 }
 
-translate([0, 0, 70]) rotate(-90)
-import("./X4.stl", convexity=3);
 
-
+font="Roboto Mono";
