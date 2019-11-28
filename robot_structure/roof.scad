@@ -51,7 +51,7 @@ difference() {
 //Trous
     translate([105, 105, -2]) linear_extrude(8, true) circle(d=5, true, $fn=200);
     translate([-105, 105, -2]) linear_extrude(8, true) circle(d=5, true, $fn=200);
-    translate([105, -105, -2]) linear_extrude(8, true) circle(d=5, true $fn=200);
+    translate([105, -105, -2]) linear_extrude(8, true) circle(d=5, true, $fn=200);
     translate([-105, -105, -2]) linear_extrude(8, true) circle(d=5, true, $fn=200);
 
 //TODO: scratch + trous lidar
