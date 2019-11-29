@@ -1,5 +1,10 @@
 
-
+translate([0,0,-9])
+difference()
+{
+ cylinder($fn = 200,h = 2, r1 = 49, r2 = 49, center = true);
+ cylinder($fn = 200,h = 3, r1 = 3, r2 = 3, center = true);
+}
 
 difference()
 {
