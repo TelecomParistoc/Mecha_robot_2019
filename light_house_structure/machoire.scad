@@ -7,12 +7,12 @@ rayonTige = 1.5 ;
 rayonRoulement =  6;
 rayonExtremiteMachoire = 10;
 EpaisseurPiece = 6;
-EpaisseurRoulement = 3;
+EpaisseurRoulement = 4;
 resolution = 200;
 longeurAttache = 40;
 epaisseurAttache = 2;
 rayonVisFixation = 1.5;
-epaisseurPhare = 3 ; 
+epaisseurPhare = 5 ;
 
 // On définit l'extrémité de la machoire
 
