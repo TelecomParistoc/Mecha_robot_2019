@@ -1,6 +1,6 @@
 difference (){
    color("red") union () {
-        linear_extrude(30, true) circle(d=25, true, $fn=200);
+        linear_extrude(30, true) circle(d=28, true, $fn=200);
         linear_extrude(3, true) square(size =  40    , center = true);;
 
     }
