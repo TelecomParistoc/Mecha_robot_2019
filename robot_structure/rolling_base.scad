@@ -1,3 +1,4 @@
+//revoir épaisseur
 difference() {
     color("grey") linear_extrude(2,true) //épaisseur à revoir
         minkowski() {
