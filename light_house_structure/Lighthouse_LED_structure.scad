@@ -5,7 +5,6 @@ difference()
  cylinder($fn = 400,h = 2, r1 = 49, r2 = 49, center = true);
  cylinder($fn = 400,h = 3, r1 = 3, r2 = 3, center = true);
 }
-
 difference()
 {
 difference()
@@ -19,3 +18,4 @@ difference()
     cylinder($fn = 400,h = 15, r1 = 47.3, r2 = 47.3, center = true);
 }
 }
+
