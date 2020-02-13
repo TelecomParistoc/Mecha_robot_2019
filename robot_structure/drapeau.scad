@@ -1,11 +1,11 @@
 // Dimensions de la pièces
 
-rayonTige = 3;
+rayonTige = 4.5;
 epaisseur = 3;
 epaisseurSup = 5;
 longeur = 20;
-rayonVis = 1;
-rayonEcrou = 1.5;
+rayonVis = 1.5;
+rayonEcrou = 4.5;
 
 // Module pave
 
