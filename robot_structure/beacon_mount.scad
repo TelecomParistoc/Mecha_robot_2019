@@ -1,2 +1,6 @@
-color([0.67,0.6,0.5])
-linear_extrude(3, true) circle(d=90, true, $fn=200);
+module beacon_mount(thickness = 3) {
+    $fn = 200;
+    color("#dfc076") linear_extrude(thickness, true) circle(d=90, true);
+}
+//projection(cut = true)
+//beacon_mount();

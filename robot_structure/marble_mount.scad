@@ -1,7 +1,7 @@
 module marble_mount() {
     $fn = 200;
-    difference (){
-        color("red") union () {
+    color("red") difference (){
+        union () {
             linear_extrude(25, true) circle(d=28, true);
             linear_extrude(3, true) square(size =  40    , center = true);
 
@@ -15,3 +15,5 @@ module marble_mount() {
         translate([25,0, 5]) linear_extrude(15, true) square(size =  50    , center = true);
     }
 }
+
+// marble_mount();
