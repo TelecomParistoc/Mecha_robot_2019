@@ -1,20 +1,18 @@
-color("red")
-
-difference() {
-    union() {
-        linear_extrude(100, true) circle(d=90, true, $fn=200);
-        linear_extrude(5, true) circle(d=120, true, $fn=200);
-    }
-    translate([0,0,-0.3]) linear_extrude(106, true)
-        union(){
-            polygon([[0,0], [100, 0], [100*cos(45), 100*sin(45)]]);
-            polygon([[0,0], [-100, 0], [-100*cos(45), 100*sin(45)]]);
-            translate([0,-45,0]) square([150,100], true);
+module beacon_mount_side(height = 100) {
+    $fn=200;
+    color("red")
+        difference() {
+            union() {
+                linear_extrude(height, true) square([80, 5], true);
+                translate([0, 12.5, 0]) linear_extrude(5, true) square([80,20], true);
+                translate([0, 6.25, height-5]) linear_extrude(5, true) square([80,7.5], true);
+            }
+            translate([20, 12.5, -1]) linear_extrude(10, true) circle(d=2.7, true);
+            translate([-20, 12.5, -1]) linear_extrude(10, true) circle(d=2.7, true);
+            translate([20, 6.25, height-6]) linear_extrude(10, true) circle(d=2.7, true);
+            translate([-20, 6.25, height-6]) linear_extrude(10, true) circle(d=2.7, true);
         }
-    translate([0,0,-3]) linear_extrude(98, true) circle(d=80, true, $fn=200);
-    translate([0,0,-0.3]) linear_extrude(10, true) circle(d=2.7, true, $fn=200);
-    translate([52.5*cos(67.5),52.5*sin(67.5),-3]) linear_extrude(10, true) circle(d=2.7, true, $fn=200);
-    translate([52.5*cos(112.5),52.5*sin(67.5),-3]) linear_extrude(10, true) circle(d=2.7, true, $fn=200);
-    translate([30*cos(67.5),30*sin(67.5),93]) linear_extrude(10, true) circle(d=2.7, true, $fn=200);
-    translate([30*cos(112.5),30*sin(67.5),93]) linear_extrude(10, true) circle(d=2.7, true, $fn=200);
 }
+
+
+//beacon_mount_side(<Right height, check robot.scad>);

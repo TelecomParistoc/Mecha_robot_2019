@@ -3,6 +3,7 @@ include <rolling_base.scad>
 include <profile.scad>
 include <marble_mount.scad>
 include <beacon_mount.scad>
+include <beacon_mount_side.scad>
 
 // warning : hauteur des roues  à prendre en compte ~= 5mm
 base_thickness = 6; // to review
@@ -23,17 +24,14 @@ translate([0,0,base_thickness]) {
 }
 
 roof_height = base_thickness + profile_height;
+
 translate([0,0,roof_height]) roof(roof_thickness);
 X4_height = X4_shift + roof_height + roof_thickness;
 color("blue") translate([0, 0, X4_height]) rotate(-90) import("./X4.stl", convexity=3);
 
+beacon_mount_side_height = beacon_mount_height - roof_height - roof_thickness;
+
+translate([-40, 0, roof_height + roof_thickness]) rotate(90) beacon_mount_side(beacon_mount_side_height);
+translate([40, 0, roof_height + roof_thickness]) rotate(-90) beacon_mount_side(beacon_mount_side_height);
+
 translate([0,0, beacon_mount_height]) beacon_mount(beacon_mount_thickness);
-
-/*translate([0,0,310]) union() {
-
-  color("blue") translate([0, 0, 70]) rotate(-90) import("./X4.stl", convexity=3);
-
-  translate([0, 0, 103]) include <beacon_mount.scad>
-  translate([0, 0, 3])rotate(90) include <beacon_mount_side.scad>
-  }
- */
