@@ -14,6 +14,7 @@ module rolling_base(thickness = 6) {
         translate([77.5, -50, -1]) linear_extrude(8,true) polygon([[-2.5, -10],[-10,-10],[-10,10],[10,10],[10, -10],[2.5,-10], [2.5, 0],[5, 0], [5,5], [-5,5], [-5, 0], [-2.5,0] ]);
         translate([-77.5, -50, -1]) linear_extrude(8,true) polygon([[-2.5, -10],[-10,-10],[-10,10],[10,10],[10, -10],[2.5,-10], [2.5, 0],[5, 0], [5,5], [-5,5], [-5, 0], [-2.5,0] ]);
 
+        // encoder wheel support holes
         translate([87.5, 50, -1]) linear_extrude(8, true) circle(d=3, true, $fn=200);
         translate([67.5, 50, -1]) linear_extrude(8, true) circle(d=3, true, $fn=200);
         translate([87.5, 70, -1]) linear_extrude(8, true) circle(d=3, true, $fn=200);
@@ -57,4 +58,4 @@ module rolling_base(thickness = 6) {
     }
 }
 //projection(cut = true)
-//rolling_base();
+rolling_base();

@@ -60,8 +60,12 @@ module roof(thickness = 3) {
         //hole flag
         translate([0, 105, -2]) linear_extrude(8, true) square([130, 12], true);
 
+        //hole beacon mount
+        translate([52.5, 20, -1]) linear_extrude(10, true) circle(d=2.7, true, $fn=200);
+        translate([52.5, -20, -1]) linear_extrude(10, true) circle(d=2.7, true, $fn=200);
+        translate([-52.5, 20, -1]) linear_extrude(10, true) circle(d=2.7, true, $fn=200);
+        translate([-52.5, -20, -1]) linear_extrude(10, true) circle(d=2.7, true, $fn=200);
 
-        //TODO: scratch page 23 règlement
     }
     font="Roboto Mono";
 }

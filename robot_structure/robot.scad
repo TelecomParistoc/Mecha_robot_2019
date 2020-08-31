@@ -4,6 +4,7 @@ include <profile.scad>
 include <marble_mount.scad>
 include <beacon_mount.scad>
 include <beacon_mount_side.scad>
+include <encoder_wheel_support.scad>
 
 // warning : hauteur des roues  à prendre en compte ~= 5mm
 base_thickness = 6; // to review
@@ -21,6 +22,8 @@ translate([0,0,base_thickness]) {
     translate([-105,105,0]) profile(thickness = 25, height = profile_height);
     translate([-105,-105,0]) profile(thickness = 25, height = profile_height);
     translate([105,-105,0]) profile(thickness = 25, height = profile_height);
+    translate([77.5,60,0]) encoder_wheel_support();
+    translate([-77.5,60,0]) encoder_wheel_support();
 }
 
 roof_height = base_thickness + profile_height;
