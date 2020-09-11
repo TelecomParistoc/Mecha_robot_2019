@@ -14,16 +14,16 @@ beacon_mount_thickness = 3; // to review
 beacon_mount_height = 430 - beacon_mount_thickness;
 X4_shift = 69.75;
 
-translate ([0,105,base_thickness]) rotate(90) marble_mount();
-translate ([0,-105,base_thickness]) rotate(-90) marble_mount();
 rolling_base(base_thickness);
 translate([0,0,base_thickness]) {
+    translate ([0,105,0]) rotate(90) marble_mount();
+    translate ([0,-105,0]) rotate(-90) marble_mount();
     translate([105,105,0]) profile(thickness = 25, height = profile_height);
     translate([-105,105,0]) profile(thickness = 25, height = profile_height);
     translate([-105,-105,0]) profile(thickness = 25, height = profile_height);
     translate([105,-105,0]) profile(thickness = 25, height = profile_height);
     translate([77.5,60,0]) encoder_wheel_support();
-    translate([-77.5,60,0]) encoder_wheel_support();
+    translate([-77.5,60,0]) rotate(180) encoder_wheel_support();
 }
 
 roof_height = base_thickness + profile_height;
